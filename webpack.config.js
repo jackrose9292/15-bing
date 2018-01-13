@@ -1,5 +1,5 @@
 var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // 入口文件配置
@@ -43,7 +43,7 @@ module.exports = {
         }]
       },
       {
-        test: /\.(png|jpg|gif)/,
+        test: /\.(png|jpg|gif|ttf|woff)/,
         use: [{
           loader: 'url-loader',
           options: {
@@ -71,8 +71,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: './src/index.html',
-      template: 'index.html',
+      template: './src/index.html',
+      filename: 'index.html',
       title: "hello vue"
     })
   ]
